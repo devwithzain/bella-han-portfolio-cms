@@ -25,6 +25,12 @@ model Service {
   imageUrl    String?
 }
 
+model AbouttTitle {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  heading String
+  title   String
+}
+
 model Process {
   id          String  @id @default(auto()) @map("_id") @db.ObjectId
   title       String

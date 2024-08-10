@@ -16,12 +16,23 @@ export const heroSchema = z.object({
    imageUrl: z.string().optional(),
 });
 
+export const aboutHero = z.object({
+   title: z.string(),
+   heading: z.string(),
+});
+
 export const servicePageSchema = z.object({
    title: z.string(),
    listOne: z.string().optional(),
    listTwo: z.string().optional(),
    description: z.string(),
 });
+
+
+export type TheroData = z.infer<typeof heroSchema>;
+export type TaboutHeroData = z.infer<typeof aboutHero>;
+export type TproductData = z.infer<typeof productSchema>;
+export type TservicePageData = z.infer<typeof servicePageSchema>;
 
 export type THeadingProps = {
    title: string;
@@ -65,10 +76,6 @@ export type ThooksProps = {
    onOpen: () => void;
    onClose: () => void;
 };
-
-export type TheroData = z.infer<typeof heroSchema>;
-export type TproductData = z.infer<typeof productSchema>;
-export type TservicePageData = z.infer<typeof servicePageSchema>;
 
 export type TlogoMarqueeProps = {
    children: React.ReactNode;

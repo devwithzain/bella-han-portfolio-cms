@@ -1,10 +1,8 @@
 import { FaHome } from "react-icons/fa";
-import { LuContact } from "react-icons/lu";
-import { GrServices } from "react-icons/gr";
-import { PiPathBold } from "react-icons/pi";
-import { HiOutlineAcademicCap } from "react-icons/hi";
-import { BiSolidDashboard, BiStoreAlt } from "react-icons/bi";
-import { MdOutlineEventAvailable, MdOutlineWebStories } from "react-icons/md";
+import { MdContactPhone } from "react-icons/md";
+import { BiSolidDashboard } from "react-icons/bi";
+import { BsBriefcaseFill } from "react-icons/bs";
+import { SiAboutdotme } from "react-icons/si";
 
 export const sideBarItem = [
 	{
@@ -21,44 +19,20 @@ export const sideBarItem = [
 	},
 	{
 		id: 3,
-		title: "Agency",
-		href: "/dashboard/agency",
-		icon: <BiStoreAlt />,
+		title: "About",
+		href: "/dashboard/about",
+		icon: <SiAboutdotme />,
 	},
 	{
 		id: 4,
-		title: "Services",
-		href: "/dashboard/services",
-		icon: <GrServices />,
+		title: "Portfolio",
+		href: "/dashboard/portfolio",
+		icon: <BsBriefcaseFill />,
 	},
 	{
 		id: 5,
-		title: "Success Stories",
-		href: "/dashboard/success-stories",
-		icon: <MdOutlineWebStories />,
-	},
-	{
-		id: 6,
-		title: "Careers",
-		href: "/dashboard/careers",
-		icon: <PiPathBold />,
-	},
-	{
-		id: 7,
-		title: "Academy",
-		href: "/dashboard/academy",
-		icon: <HiOutlineAcademicCap />,
-	},
-	{
-		id: 8,
-		title: "Events",
-		href: "/dashboard/events",
-		icon: <MdOutlineEventAvailable />,
-	},
-	{
-		id: 9,
-		title: "Contact Us",
-		href: "/dashboard/contact-us",
-		icon: <LuContact />,
+		title: "Contact",
+		href: "/dashboard/contact",
+		icon: <MdContactPhone />,
 	},
 ];

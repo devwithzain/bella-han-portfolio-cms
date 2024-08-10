@@ -5,6 +5,11 @@ export const getData = async () => {
    return data;
 };
 
+export const getAboutHeroData = async () => {
+   const data = await prisma?.abouttTitle.findMany();
+   return data;
+};
+
 export const getProcess = async () => {
    const data = await prisma?.process.findMany();
    return data;

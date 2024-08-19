@@ -13,11 +13,11 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
 	try {
 		const body = await request.json();
-		const { title, imageUrl } = body;
+		const { title, images } = body;
 		const post = await prisma?.workModalSection.create({
 			data: {
 				title,
-				imageUrl,
+				images
 			},
 		});
 		return NextResponse.json(post);

@@ -161,15 +161,16 @@ export default async function Service() {
 												</div>
 											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
-												{item.imageUrl && (
+												{item.images.map((img, i) => (
 													<Image
-														src={item.imageUrl}
+														key={i}
+														src={img}
 														alt="img"
 														className="w-[100px] h-[100px]"
 														width={800}
 														height={400}
 													/>
-												)}
+												))}
 											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
 												<div className="flex items-end justify-end gap-4">
@@ -412,15 +413,16 @@ export default async function Service() {
 												</div>
 											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
-												{item.imageUrl && (
+												{item.images.map((img, i) => (
 													<Image
-														src={item.imageUrl}
+														key={i}
+														src={img}
 														alt="img"
 														className="w-[100px] h-[100px]"
 														width={800}
 														height={400}
 													/>
-												)}
+												))}
 											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
 												<div className="flex items-end justify-end gap-4">
@@ -615,15 +617,16 @@ export default async function Service() {
 												</div>
 											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
-												{item.imageUrl && (
+												{item.images.map((img, i) => (
 													<Image
-														src={item.imageUrl}
+														key={i}
+														src={img}
 														alt="img"
 														className="w-[100px] h-[100px]"
 														width={800}
 														height={400}
 													/>
-												)}
+												))}
 											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
 												<div className="flex items-end justify-end gap-4">

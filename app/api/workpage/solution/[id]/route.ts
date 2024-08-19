@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function PATCH(request: Request, { params }: { params: { id: string; }; }) {
 	try {
 		const body = await request.json();
-		const { title, heading, imageUrl, subTitle, paragraph } = body;
+		const { title, heading, images, subTitle, paragraph } = body;
 
 		const post = await prisma.workSolutionSection.update({
 			where: {
@@ -14,7 +14,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
 				title,
 				subTitle,
 				paragraph,
-				imageUrl,
+				images,
 				heading
 			},
 		});

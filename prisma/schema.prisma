@@ -15,33 +15,66 @@ model User {
   image          String?
   hashedPassword String?
   createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
+  updatedAt      DateTime
 }
 
-model Service {
+model WorkHeroSection {
   id          String  @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String
   imageUrl    String?
 }
 
-model AbouttTitle {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  heading String
-  title   String
+model WorkResearchSection {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  heading  String
+  imageUrl String?
 }
 
-model Process {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  title       String
-  description String
-  videoUrl    String?
+model WorkDangerSection {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  heading  String
+  imageUrl String?
 }
 
-model ServicePage {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  title       String
-  listOne     String?
-  listTwo     String?
-  description String
+model WorkImpactSection {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  heading  String
+  imageUrl String?
+}
+
+model WorkSolutionSection {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  heading   String
+  paragraph String
+  subTitle  String
+  imageUrl  String?
+}
+
+model WorkLifeCycleSection {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  imageUrl String?
+}
+
+model WorkMaterialsSection {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  heading  String
+  imageUrl String?
+}
+
+model WorkModalSection {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  imageUrl String?
+}
+
+model WorkRenderSection {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  imageUrl String?
 }

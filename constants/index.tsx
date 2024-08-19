@@ -2,7 +2,6 @@ import { FaHome } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { BiSolidDashboard } from "react-icons/bi";
 import { BsBriefcaseFill } from "react-icons/bs";
-import { SiAboutdotme } from "react-icons/si";
 
 export const sideBarItem = [
 	{
@@ -19,18 +18,12 @@ export const sideBarItem = [
 	},
 	{
 		id: 3,
-		title: "About",
-		href: "/dashboard/about",
-		icon: <SiAboutdotme />,
-	},
-	{
-		id: 4,
 		title: "Portfolio",
 		href: "/dashboard/portfolio",
 		icon: <BsBriefcaseFill />,
 	},
 	{
-		id: 5,
+		id: 4,
 		title: "Contact",
 		href: "/dashboard/contact",
 		icon: <MdContactPhone />,

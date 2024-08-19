@@ -3,36 +3,56 @@ import { User } from "@prisma/client";
 import { IconType } from "react-icons";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 
-export const productSchema = z.object({
-   title: z.string(),
-   description: z.string(),
-   imageUrl: z.string().optional(),
-   videoUrl: z.string().optional(),
-});
-
-export const heroSchema = z.object({
+export const workPageHeroSchema = z.object({
    title: z.string(),
    description: z.string(),
    imageUrl: z.string().optional(),
 });
 
-export const aboutHero = z.object({
+export const workPageDangerSchema = z.object({
    title: z.string(),
    heading: z.string(),
+   imageUrl: z.string().optional(),
 });
 
-export const servicePageSchema = z.object({
+export const workPageImpactSchema = z.object({
    title: z.string(),
-   listOne: z.string().optional(),
-   listTwo: z.string().optional(),
-   description: z.string(),
+   heading: z.string(),
+   imageUrl: z.string().optional(),
+});
+
+export const workSolutionImpactSchema = z.object({
+   title: z.string(),
+   heading: z.string(),
+   paragraph: z.string(),
+   subTitle: z.string(),
+   imageUrl: z.string().optional(),
+});
+
+export const workPageMaterialSchema = z.object({
+   title: z.string(),
+   heading: z.string(),
+   imageUrl: z.string().optional(),
+});
+
+export const workPageResearchSchema = z.object({
+   title: z.string(),
+   heading: z.string(),
+   imageUrl: z.string().optional(),
+});
+
+export const workPageLifeCycleSchema = z.object({
+   imageUrl: z.string().optional(),
 });
 
 
-export type TheroData = z.infer<typeof heroSchema>;
-export type TaboutHeroData = z.infer<typeof aboutHero>;
-export type TproductData = z.infer<typeof productSchema>;
-export type TservicePageData = z.infer<typeof servicePageSchema>;
+export type TworkHeroSectionData = z.infer<typeof workPageHeroSchema>;
+export type TworkDangerSectionData = z.infer<typeof workPageDangerSchema>;
+export type TworkImpactSectionData = z.infer<typeof workPageImpactSchema>;
+export type TworkMaterialSectionData = z.infer<typeof workPageMaterialSchema>;
+export type TworkResearchSectionData = z.infer<typeof workPageResearchSchema>;
+export type TworkSolutionSectionData = z.infer<typeof workSolutionImpactSchema>;
+export type TworkLifeCycleSectionData = z.infer<typeof workPageLifeCycleSchema>;
 
 export type THeadingProps = {
    title: string;

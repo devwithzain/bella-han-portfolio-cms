@@ -14,14 +14,12 @@ declare global {
 }
 
 export default function MediaUpload({ onImageUpload }: TimageUploadProps) {
-	const [mediaUrl, setMediaUrl] = useState("");
-	const [mediaType, setMediaType] = useState("");
+	const [mediaUrl, setMediaUrl] = useState<string>();
 
 	const handleMediaChange = (result: CloudinaryUploadWidgetResults) => {
 		if (typeof result === "object" && "info" in result) {
 			const info = result.info as CloudinaryUploadWidgetInfo;
 			setMediaUrl(info.secure_url);
-			setMediaType(info.resource_type);
 			onImageUpload(info.secure_url);
 		}
 	};
@@ -48,25 +46,12 @@ export default function MediaUpload({ onImageUpload }: TimageUploadProps) {
 			</CldUploadWidget>
 			{mediaUrl && (
 				<div>
-					{mediaType === "image" && (
-						<Image
-							src={mediaUrl}
-							alt="Uploaded"
-							width={400}
-							height={400}
-						/>
-					)}
-					{mediaType === "video" && (
-						<video
-							controls
-							width="400">
-							<source
-								src={mediaUrl}
-								type="video/mp4"
-							/>
-							Your browser does not support the video tag.
-						</video>
-					)}
+					<Image
+						src={mediaUrl}
+						alt="Uploaded"
+						width={400}
+						height={400}
+					/>
 				</div>
 			)}
 		</>

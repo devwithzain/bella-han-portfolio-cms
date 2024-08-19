@@ -23,6 +23,7 @@ export default function Form({ response }: any) {
 			title: response?.title || "",
 			heading: response?.heading || "",
 			imageUrl: response?.imageUrl || "",
+			images: response?.images || [],
 		},
 	});
 

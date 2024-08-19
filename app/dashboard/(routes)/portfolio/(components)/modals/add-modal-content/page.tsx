@@ -3,14 +3,13 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import { ImageUpload } from "@/components";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ImagesUpload, ImageUpload } from "@/components";
-import { TworkImpactSectionData, workPageImpactSchema } from "@/types";
+import { TworkModalSectionData, workModalSchema } from "@/types";
 
 export default function AddService() {
 	const [imageUrl, setImageUrl] = useState("");
-	const [uploadedImages, setUploadedImages] = useState<string[]>([]);
 
 	const router = useRouter();
 	const {
@@ -19,8 +18,8 @@ export default function AddService() {
 		setValue,
 		handleSubmit,
 		formState: { isSubmitting, errors },
-	} = useForm<TworkImpactSectionData>({
-		resolver: zodResolver(workPageImpactSchema),
+	} = useForm<TworkModalSectionData>({
+		resolver: zodResolver(workModalSchema),
 	});
 
 	const onMediaUpload = (url: string) => {
@@ -28,16 +27,9 @@ export default function AddService() {
 		setValue("imageUrl", url);
 	};
 
-	const handleImageUpload = (urls: string[]) => {
-		setUploadedImages(urls);
-		setValue("images", urls);
-	};
-
-	const onSubmits = async (data: TworkImpactSectionData) => {
+	const onSubmits = async (data: TworkModalSectionData) => {
 		try {
-			data.images = uploadedImages;
-
-			await axios.post("/api/workpage/impact", data);
+			await axios.post("/api/workpage/modal", data);
 		} catch (error: any) {
 			toast.success("Error", error);
 		} finally {
@@ -49,7 +41,7 @@ export default function AddService() {
 	};
 
 	return (
-		<div className="w-full min-h-screen bg-white p-10 flex flex-col gap-6">
+		<div className="w-full h-screen bg-white p-10 flex flex-col gap-6">
 			<div className="w-full flex flex-col gap-10">
 				<h1 className="text-[40px] text-black font-ProximaNova font-semibold">
 					Content Details
@@ -73,22 +65,7 @@ export default function AddService() {
 							)}
 						</div>
 					</div>
-					<div className="relative w-full">
-						<input
-							{...register("heading")}
-							placeholder=" "
-							type="text"
-							className="peer p-4 pt-6 w-full font-light bg-white border-2 rounded-md outline-none transition disabled:opacity-70"
-						/>
-						<label className="absolute text-md duration-150 transform -translate-y-3 top-5 z-10 left-0 pl-6 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
-							Heading
-						</label>
-						{errors.heading && (
-							<span className="text-red-500">{errors.heading.message}</span>
-						)}
-					</div>
 					<ImageUpload onImageUpload={onMediaUpload} />
-					<ImagesUpload onImageUploads={handleImageUpload} />
 					<input
 						type="submit"
 						value={`${isSubmitting ? "Loading..." : "Submit"}`}

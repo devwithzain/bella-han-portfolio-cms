@@ -25,6 +25,7 @@ export const workPageImpactSchema = z.object({
    title: z.string(),
    heading: z.string(),
    imageUrl: z.string().optional(),
+   images: z.array(z.string()).optional(),
 });
 
 export const workSolutionImpactSchema = z.object({

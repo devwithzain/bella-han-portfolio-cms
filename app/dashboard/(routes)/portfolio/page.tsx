@@ -21,14 +21,14 @@ export default async function Service() {
 		redirect("/");
 	}
 	const response = await getWorkSectionData();
+	const responseModal = await getModalSectionData();
+	const responseRender = await getRenderSectionData();
 	const responseDnager = await getDangerSectionData();
 	const responseImpact = await getImpactSectionData();
 	const responseResearch = await getResearchSectionData();
 	const responseSolution = await getSolutionSectionData();
-	const responseLifeCycle = await getLifeCycleSectionData();
 	const responseMaterial = await getMaterialSectionData();
-	const responseRender = await getRenderSectionData();
-	const responseModal = await getModalSectionData();
+	const responseLifeCycle = await getLifeCycleSectionData();
 	return (
 		<>
 			<div className="w-full p-4 flex gap-2">

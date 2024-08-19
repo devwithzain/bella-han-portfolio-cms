@@ -40,10 +40,11 @@ model WorkDangerSection {
 }
 
 model WorkImpactSection {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
   title    String
   heading  String
   imageUrl String?
+  images   String[]
 }
 
 model WorkSolutionSection {

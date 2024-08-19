@@ -1,16 +1,16 @@
 "use client";
 import axios from "axios";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { TworkSolutionSectionData, workSolutionImpactSchema } from "@/types";
+import { ImagesUpload } from "@/components";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ImageUpload } from "@/components";
-import { useState } from "react";
+import { TworkSolutionSectionData, workSolutionImpactSchema } from "@/types";
 
 export default function Form({ response }: any) {
 	const router = useRouter();
-	const [imageUrl, setImageUrl] = useState("");
+	const [uploadedImages, setUploadedImages] = useState<string[]>([]);
 
 	const {
 		register,
@@ -24,17 +24,18 @@ export default function Form({ response }: any) {
 			heading: response?.heading || "",
 			paragraph: response?.paragraph || "",
 			subTitle: response?.subTitle || "",
-			imageUrl: response?.imageUrl || "",
+			images: response?.images || "",
 		},
 	});
 
-	const onImageUpload = (url: string) => {
-		setImageUrl(url);
-		setValue("imageUrl", url);
+	const handleImageUpload = (urls: string[]) => {
+		setUploadedImages(urls);
+		setValue("images", urls);
 	};
 
 	const onSubmits = async (data: TworkSolutionSectionData) => {
 		try {
+			data.images = uploadedImages;
 			await axios.patch(`/api/workpage/solution/${response.id}`, data);
 			toast.success("Updated");
 		} catch (error: any) {
@@ -109,7 +110,7 @@ export default function Form({ response }: any) {
 							<span className="text-red-500">{errors.subTitle.message}</span>
 						)}
 					</div>
-					<ImageUpload onImageUpload={onImageUpload} />
+					<ImagesUpload onImageUploads={handleImageUpload} />
 					<input
 						type="submit"
 						value={`${isSubmitting ? "Loading..." : "Update"}`}

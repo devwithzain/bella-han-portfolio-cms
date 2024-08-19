@@ -3,14 +3,14 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
-import { ImageUpload } from "@/components";
+import { ImagesUpload } from "@/components";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TworkModalSectionData, workModalSchema } from "@/types";
 
 export default function Form({ response }: any) {
 	const router = useRouter();
-	const [imageUrl, setImageUrl] = useState("");
+	const [uploadedImages, setUploadedImages] = useState<string[]>([]);
 
 	const {
 		register,
@@ -21,17 +21,18 @@ export default function Form({ response }: any) {
 		resolver: zodResolver(workModalSchema),
 		defaultValues: {
 			title: response?.title || "",
-			imageUrl: response?.imageUrl || "",
+			images: response?.images || "",
 		},
 	});
 
-	const onImageUpload = (url: string) => {
-		setImageUrl(url);
-		setValue("imageUrl", url);
+	const handleImageUpload = (urls: string[]) => {
+		setUploadedImages(urls);
+		setValue("images", urls);
 	};
 
 	const onSubmits = async (data: TworkModalSectionData) => {
 		try {
+			data.images = uploadedImages;
 			await axios.patch(`/api/workpage/modal/${response.id}`, data);
 			toast.success("Updated");
 		} catch (error: any) {
@@ -64,7 +65,7 @@ export default function Form({ response }: any) {
 							)}
 						</div>
 					</div>
-					<ImageUpload onImageUpload={onImageUpload} />
+					<ImagesUpload onImageUploads={handleImageUpload} />
 					<input
 						type="submit"
 						value={`${isSubmitting ? "Loading..." : "Update"}`}

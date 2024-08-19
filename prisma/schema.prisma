@@ -26,10 +26,10 @@ model WorkHeroSection {
 }
 
 model WorkResearchSection {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
-  title    String
-  heading  String
-  imageUrl String?
+  id      String   @id @default(auto()) @map("_id") @db.ObjectId
+  title   String
+  heading String
+  images  String[]
 }
 
 model WorkDangerSection {
@@ -48,12 +48,12 @@ model WorkImpactSection {
 }
 
 model WorkSolutionSection {
-  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   heading   String
   paragraph String
   subTitle  String
-  imageUrl  String?
+  images    String[]
 }
 
 model WorkLifeCycleSection {
@@ -62,20 +62,22 @@ model WorkLifeCycleSection {
 }
 
 model WorkMaterialsSection {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
   title    String
   heading  String
   imageUrl String?
+  images   String[]
 }
 
 model WorkModalSection {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
-  title    String
-  imageUrl String?
+  id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  title  String
+  images String[]
 }
 
 model WorkRenderSection {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
-  title    String
-  imageUrl String?
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  paragraph String
+  imageUrl  String?
 }

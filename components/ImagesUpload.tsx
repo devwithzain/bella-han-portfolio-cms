@@ -38,7 +38,7 @@ export default function ImagesUpload({ onImageUploads }: TimageUploadProps) {
 				onSuccess={handleMediaChange}
 				uploadPreset="jdz0tunu"
 				options={{
-					maxFiles: 10,
+					maxFiles: 15,
 					resourceType: "auto",
 				}}>
 				{({ open }) => {

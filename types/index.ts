@@ -13,6 +13,7 @@ export const workPageResearchSchema = z.object({
    title: z.string(),
    heading: z.string(),
    imageUrl: z.string().optional(),
+   images: z.array(z.string()).optional(),
 });
 
 export const workPageDangerSchema = z.object({
@@ -33,7 +34,7 @@ export const workSolutionImpactSchema = z.object({
    heading: z.string(),
    paragraph: z.string(),
    subTitle: z.string(),
-   imageUrl: z.string().optional(),
+   images: z.array(z.string()).optional(),
 });
 
 export const workPageLifeCycleSchema = z.object({
@@ -44,16 +45,18 @@ export const workPageMaterialSchema = z.object({
    title: z.string(),
    heading: z.string(),
    imageUrl: z.string().optional(),
+   images: z.array(z.string()).optional(),
 });
 
 
 export const workModalSchema = z.object({
    title: z.string(),
-   imageUrl: z.string().optional(),
+   images: z.array(z.string()).optional(),
 });
 
 export const workRenderSchema = z.object({
    title: z.string(),
+   paragraph: z.string(),
    imageUrl: z.string().optional(),
 });
 

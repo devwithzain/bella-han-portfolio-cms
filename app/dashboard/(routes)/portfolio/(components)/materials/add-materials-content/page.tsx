@@ -3,13 +3,14 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
-import { ImageUpload } from "@/components";
+import { ImagesUpload, ImageUpload } from "@/components";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TworkMaterialSectionData, workPageMaterialSchema } from "@/types";
 
 export default function AddService() {
 	const [imageUrl, setImageUrl] = useState("");
+	const [uploadedImages, setUploadedImages] = useState<string[]>([]);
 
 	const router = useRouter();
 	const {
@@ -26,9 +27,15 @@ export default function AddService() {
 		setImageUrl(url);
 		setValue("imageUrl", url);
 	};
+	const handleImageUpload = (urls: string[]) => {
+		setUploadedImages(urls);
+		setValue("images", urls);
+	};
 
 	const onSubmits = async (data: TworkMaterialSectionData) => {
 		try {
+			data.images = uploadedImages;
+
 			await axios.post("/api/workpage/material", data);
 		} catch (error: any) {
 			toast.success("Error", error);
@@ -80,6 +87,7 @@ export default function AddService() {
 						)}
 					</div>
 					<ImageUpload onImageUpload={onMediaUpload} />
+					<ImagesUpload onImageUploads={handleImageUpload} />
 					<input
 						type="submit"
 						value={`${isSubmitting ? "Loading..." : "Submit"}`}

@@ -11,7 +11,4 @@ export { default as Logo } from './Logo';
 export { default as MenuItem } from './MenuItem';
 export { default as EditButton } from './EditButton';
 export { default as ImageUpload } from './ImageUpload';
-export { default as EditForm } from './EditForm';
-export { default as EditFormPro } from './EditFormPro';
-export { default as EditFormSer } from './EditFormSer';
 export { default as Sidebar } from './Sidebar';

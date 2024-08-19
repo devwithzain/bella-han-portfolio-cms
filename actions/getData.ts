@@ -34,3 +34,13 @@ export const getLifeCycleSectionData = async () => {
    const data = await prisma?.workLifeCycleSection.findMany();
    return data;
 };
+
+export const getModalSectionData = async () => {
+   const data = await prisma?.workModalSection.findMany();
+   return data;
+};
+
+export const getRenderSectionData = async () => {
+   const data = await prisma?.workRenderSection.findMany();
+   return data;
+};

@@ -9,6 +9,12 @@ export const workPageHeroSchema = z.object({
    imageUrl: z.string().optional(),
 });
 
+export const workPageResearchSchema = z.object({
+   title: z.string(),
+   heading: z.string(),
+   imageUrl: z.string().optional(),
+});
+
 export const workPageDangerSchema = z.object({
    title: z.string(),
    heading: z.string(),
@@ -29,23 +35,30 @@ export const workSolutionImpactSchema = z.object({
    imageUrl: z.string().optional(),
 });
 
+export const workPageLifeCycleSchema = z.object({
+   imageUrl: z.string().optional(),
+});
+
 export const workPageMaterialSchema = z.object({
    title: z.string(),
    heading: z.string(),
    imageUrl: z.string().optional(),
 });
 
-export const workPageResearchSchema = z.object({
+
+export const workModalSchema = z.object({
    title: z.string(),
-   heading: z.string(),
    imageUrl: z.string().optional(),
 });
 
-export const workPageLifeCycleSchema = z.object({
+export const workRenderSchema = z.object({
+   title: z.string(),
    imageUrl: z.string().optional(),
 });
 
 
+export type TworkModalSectionData = z.infer<typeof workModalSchema>;
+export type TworkRenderSectionData = z.infer<typeof workRenderSchema>;
 export type TworkHeroSectionData = z.infer<typeof workPageHeroSchema>;
 export type TworkDangerSectionData = z.infer<typeof workPageDangerSchema>;
 export type TworkImpactSectionData = z.infer<typeof workPageImpactSchema>;

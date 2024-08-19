@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { ImageUpload } from "@/components";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { TworkHeroSectionData, workPageHeroSchema } from "@/types";
+import { TworkRenderSectionData, workRenderSchema } from "@/types";
 
 export default function AddService() {
 	const [imageUrl, setImageUrl] = useState("");
@@ -18,8 +18,8 @@ export default function AddService() {
 		setValue,
 		handleSubmit,
 		formState: { isSubmitting, errors },
-	} = useForm<TworkHeroSectionData>({
-		resolver: zodResolver(workPageHeroSchema),
+	} = useForm<TworkRenderSectionData>({
+		resolver: zodResolver(workRenderSchema),
 	});
 
 	const onMediaUpload = (url: string) => {
@@ -27,9 +27,9 @@ export default function AddService() {
 		setValue("imageUrl", url);
 	};
 
-	const onSubmits = async (data: TworkHeroSectionData) => {
+	const onSubmits = async (data: TworkRenderSectionData) => {
 		try {
-			await axios.post("/api/workpage/hero", data);
+			await axios.post("/api/workpage/render", data);
 		} catch (error: any) {
 			toast.success("Error", error);
 		} finally {
@@ -49,34 +49,18 @@ export default function AddService() {
 				<form
 					onSubmit={handleSubmit(onSubmits)}
 					className="w-full flex flex-col items-center justify-between gap-10">
-					<div className="relative w-full flex flex-col gap-3">
-						<div>
-							<input
-								{...register("title")}
-								placeholder=" "
-								type="text"
-								className="peer p-4 pt-6 w-full font-light bg-white border-2 rounded-md outline-none transition disabled:opacity-70"
-							/>
-							<label className="absolute text-md duration-150 transform -translate-y-3 top-5 z-10 left-0 pl-6 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
-								Title
-							</label>
-							{errors.title && (
-								<span className="text-red-500">{errors.title.message}</span>
-							)}
-						</div>
-					</div>
 					<div className="relative w-full">
 						<input
-							{...register("description")}
+							{...register("title")}
 							placeholder=" "
 							type="text"
 							className="peer p-4 pt-6 w-full font-light bg-white border-2 rounded-md outline-none transition disabled:opacity-70"
 						/>
 						<label className="absolute text-md duration-150 transform -translate-y-3 top-5 z-10 left-0 pl-6 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">
-							Description
+							Title
 						</label>
-						{errors.description && (
-							<span className="text-red-500">{errors.description.message}</span>
+						{errors.title && (
+							<span className="text-red-500">{errors.title.message}</span>
 						)}
 					</div>
 					<ImageUpload onImageUpload={onMediaUpload} />

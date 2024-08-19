@@ -7,6 +7,8 @@ import {
 	getImpactSectionData,
 	getLifeCycleSectionData,
 	getMaterialSectionData,
+	getModalSectionData,
+	getRenderSectionData,
 	getResearchSectionData,
 	getSolutionSectionData,
 	getWorkSectionData,
@@ -25,6 +27,8 @@ export default async function Service() {
 	const responseSolution = await getSolutionSectionData();
 	const responseLifeCycle = await getLifeCycleSectionData();
 	const responseMaterial = await getMaterialSectionData();
+	const responseRender = await getRenderSectionData();
+	const responseModal = await getModalSectionData();
 	return (
 		<>
 			<div className="w-full p-4 flex gap-2">
@@ -583,7 +587,7 @@ export default async function Service() {
 							</div>
 							<div>
 								<Link
-									href="/dashboard/portfolio/modal/add-modal-content"
+									href="/dashboard/portfolio/modals/add-modals-content"
 									className="text-[16px] cursor-pointer font-serif font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
 									Add New
 								</Link>
@@ -594,9 +598,6 @@ export default async function Service() {
 								<thead>
 									<tr>
 										<th className="border border-gray-200 px-4 py-2">TITLE</th>
-										<th className="border border-gray-200 px-4 py-2">
-											DESCRIPTION
-										</th>
 										<th className="border border-gray-200 px-4 py-2">Image</th>
 										<th className="border border-gray-200 px-4 py-2">
 											Actions
@@ -604,20 +605,13 @@ export default async function Service() {
 									</tr>
 								</thead>
 								<tbody>
-									{responseResearch?.map((item) => (
+									{responseModal?.map((item) => (
 										<tr key={item.id}>
 											<td className="border border-gray-200 px-4 py-2 w-[20%]">
 												<div>
 													<h1 className="text-[15px] text-black font-medium font-sans">
 														{item.title}
 													</h1>
-												</div>
-											</td>
-											<td className="border border-gray-200 px-4 py-2 w-[60%]">
-												<div>
-													<p className="text-[15px] text-black font-medium font-sans">
-														{item.heading}
-													</p>
 												</div>
 											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
@@ -636,7 +630,7 @@ export default async function Service() {
 													<EditButton
 														id={item.id}
 														path="/api/workpage/modal"
-														url="portfolio/modal"
+														url="portfolio/modals"
 													/>
 													<DeleteButton
 														id={item.id}
@@ -670,6 +664,7 @@ export default async function Service() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
+										<th className="border border-gray-200 px-4 py-2">Title</th>
 										<th className="border border-gray-200 px-4 py-2">Image</th>
 										<th className="border border-gray-200 px-4 py-2">
 											Actions
@@ -677,8 +672,15 @@ export default async function Service() {
 									</tr>
 								</thead>
 								<tbody>
-									{responseLifeCycle?.map((item) => (
+									{responseRender?.map((item) => (
 										<tr key={item.id}>
+											<td className="border border-gray-200 px-4 py-2 w-[60%]">
+												<div>
+													<p className="text-[15px] text-black font-medium font-sans">
+														{item.title}
+													</p>
+												</div>
+											</td>
 											<td className="border border-gray-200 px-4 py-2 w-[10%]">
 												{item.imageUrl && (
 													<Image

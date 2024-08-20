@@ -5,7 +5,7 @@ import ToasterProvider from "@/provider/ToastProvide";
 
 export const metadata: Metadata = {
 	title: "Bella Han Admin Panel",
-	description: "Bella Portfolio Webiste Admin Panel by devwithzain",
+	description: "Bella work Webiste Admin Panel by devwithzain",
 };
 export default function RootLayout({
 	children,

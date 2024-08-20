@@ -3,6 +3,32 @@ import { User } from "@prisma/client";
 import { IconType } from "react-icons";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 
+// home page zod schema
+
+export const homePageAboutSchema = z.object({
+   title: z.string(),
+   paragraph1: z.string(),
+   paragraph2: z.string(),
+   paragraph3: z.string(),
+   paragraph4: z.string(),
+   imageUrl: z.string().optional(),
+});
+
+export const homePageSkillsSchema = z.object({
+   title: z.string(),
+   heading1: z.string(),
+   heading2: z.string(),
+   heading3: z.string(),
+   heading4: z.string(),
+   heading5: z.string(),
+   skillNo1: z.string(),
+   skillNo2: z.string(),
+   skillNo3: z.string(),
+   skillNo4: z.string(),
+   skillNo5: z.string(),
+   images: z.array(z.string()).optional(),
+});
+
 export const workPageHeroSchema = z.object({
    title: z.string(),
    description: z.string(),
@@ -68,6 +94,9 @@ export const workRenderSchema = z.object({
    imageUrl: z.string().optional(),
 });
 
+
+export type TpageAboutSectionData = z.infer<typeof homePageAboutSchema>;
+export type TpageSkillSectionData = z.infer<typeof homePageSkillsSchema>;
 
 export type TworkModalSectionData = z.infer<typeof workModalSchema>;
 export type TworkRenderSectionData = z.infer<typeof workRenderSchema>;

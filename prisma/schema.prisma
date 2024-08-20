@@ -18,11 +18,39 @@ model User {
   updatedAt      DateTime  @updatedAt
 }
 
+// home page schemas
+model HomeAboutSection {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  title      String
+  paragraph1 String
+  paragraph2 String
+  paragraph3 String
+  paragraph4 String
+  imageUrl   String
+}
+
+model HomeSkillsSection {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  skillNo1 String
+  skillNo2 String
+  skillNo3 String
+  skillNo4 String
+  skillNo5 String
+  heading1 String
+  heading2 String
+  heading3 String
+  heading4 String
+  heading5 String
+  images   String[]
+}
+
+// work page schemas
 model WorkHeroSection {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String
-  imageUrl    String?
+  imageUrl    String
 }
 
 model WorkResearchSection {
@@ -51,7 +79,7 @@ model WorkImpactSection {
   id       String   @id @default(auto()) @map("_id") @db.ObjectId
   title    String
   heading  String
-  imageUrl String?
+  imageUrl String
   images   String[]
 }
 
@@ -65,15 +93,15 @@ model WorkSolutionSection {
 }
 
 model WorkLifeCycleSection {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
-  imageUrl String?
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  imageUrl String
 }
 
 model WorkMaterialsSection {
   id       String   @id @default(auto()) @map("_id") @db.ObjectId
   title    String
   heading  String
-  imageUrl String?
+  imageUrl String
   images   String[]
 }
 
@@ -84,8 +112,8 @@ model WorkModalSection {
 }
 
 model WorkRenderSection {
-  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   paragraph String
-  imageUrl  String?
+  imageUrl  String
 }

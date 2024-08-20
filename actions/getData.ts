@@ -44,3 +44,13 @@ export const getRenderSectionData = async () => {
    const data = await prisma?.workRenderSection.findMany();
    return data;
 };
+
+export const getAboutSectionData = async () => {
+   const data = await prisma?.homeAboutSection.findMany();
+   return data;
+};
+
+export const getSkillsSectionData = async () => {
+   const data = await prisma?.homeSkillsSection.findMany();
+   return data;
+};

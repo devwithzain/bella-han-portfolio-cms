@@ -13,12 +13,20 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
 	try {
 		const body = await request.json();
-		const { title, heading, imageUrl } = body;
+		const { title1, title2, title3, title4, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, images } = body;
 		const post = await prisma?.workDangerSection.create({
 			data: {
-				title,
-				heading,
-				imageUrl
+				title1,
+				title2,
+				title3,
+				title4,
+				paragraph1,
+				paragraph2,
+				paragraph3,
+				paragraph4,
+				paragraph5,
+				paragraph6,
+				images
 			},
 		});
 		return NextResponse.json(post);

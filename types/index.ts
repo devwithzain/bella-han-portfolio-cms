@@ -17,9 +17,17 @@ export const workPageResearchSchema = z.object({
 });
 
 export const workPageDangerSchema = z.object({
-   title: z.string(),
-   heading: z.string(),
-   imageUrl: z.string().optional(),
+   title1: z.string(),
+   title2: z.string(),
+   title3: z.string(),
+   title4: z.string(),
+   paragraph1: z.string(),
+   paragraph2: z.string(),
+   paragraph3: z.string(),
+   paragraph4: z.string(),
+   paragraph5: z.string(),
+   paragraph6: z.string(),
+   images: z.array(z.string()).optional(),
 });
 
 export const workPageImpactSchema = z.object({

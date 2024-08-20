@@ -12,19 +12,19 @@ export const sideBarItem = [
 	},
 	{
 		id: 2,
-		title: "Home",
+		title: "Home Page",
 		href: "/dashboard/home",
 		icon: <FaHome />,
 	},
 	{
 		id: 3,
-		title: "Portfolio",
-		href: "/dashboard/portfolio",
+		title: "Work Page",
+		href: "/dashboard/work",
 		icon: <BsBriefcaseFill />,
 	},
 	{
 		id: 4,
-		title: "Contact",
+		title: "Contact Page",
 		href: "/dashboard/contact",
 		icon: <MdContactPhone />,
 	},

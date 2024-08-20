@@ -33,10 +33,18 @@ model WorkResearchSection {
 }
 
 model WorkDangerSection {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
-  title    String
-  heading  String
-  imageUrl String?
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  title1     String
+  title2     String
+  title3     String
+  title4     String
+  paragraph1 String
+  paragraph2 String
+  paragraph3 String
+  paragraph4 String
+  paragraph5 String
+  paragraph6 String
+  images     String[]
 }
 
 model WorkImpactSection {

@@ -137,7 +137,7 @@ export default async function Service() {
 										<th className="border border-gray-200 px-4 py-2">
 											DESCRIPTION
 										</th>
-										<th className="border border-gray-200 px-4 py-2">Image</th>
+										<th className="border border-gray-200 px-4 py-2">Images</th>
 										<th className="border border-gray-200 px-4 py-2">
 											Actions
 										</th>
@@ -589,7 +589,7 @@ export default async function Service() {
 							</div>
 							<div>
 								<Link
-									href="/dashboard/portfolio/modals/add-modals-content"
+									href="/dashboard/portfolio/modals/add-modal-content"
 									className="text-[16px] cursor-pointer font-serif font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
 									Add New
 								</Link>
@@ -681,6 +681,13 @@ export default async function Service() {
 												<div>
 													<p className="text-[15px] text-black font-medium font-sans">
 														{item.title}
+													</p>
+												</div>
+											</td>
+											<td className="border border-gray-200 px-4 py-2 w-[60%]">
+												<div>
+													<p className="text-[15px] text-black font-medium font-sans">
+														{item.paragraph}
 													</p>
 												</div>
 											</td>

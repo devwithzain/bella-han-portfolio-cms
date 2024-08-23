@@ -14,8 +14,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      ProximaNova: ["ProximaNova", "sans-serif"],
-      Muli: ["Muli", "sans-serif"],
+      "Poppins": ["Poppins", "sans-serif"],
     },
     screens: {
       xm: { max: "400px" },

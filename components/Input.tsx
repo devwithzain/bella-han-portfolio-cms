@@ -34,6 +34,7 @@ export default function Input({
 				className={`
           peer
           w-full
+          font-Poppins
           p-4
           pt-6 
           font-light 
@@ -54,6 +55,7 @@ export default function Input({
           absolute 
           text-md
           duration-150 
+          font-Poppins
           transform 
           -translate-y-3 
           top-5 

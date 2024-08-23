@@ -41,16 +41,16 @@ export default async function Dashboard() {
 				{/* @ts-ignore */}
 				<AdminNavbar currentUser={currentUser} />
 				<div className="px-6">
-					<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+					<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 						Home Page Content
 					</h1>
 				</div>
 				<hr className="pb-5" />
 				{/* home page about section */}
-				<div className="gap-4 flex flex-col px-6">
-					<div className="w-full flex justify-between items-center gap-4">
+				<div className="gap-1 flex flex-col px-6 pb-5">
+					<div className="w-full flex justify-between items-center">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								About Section
 							</h1>
 						</div>
@@ -115,10 +115,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* home page skills section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Skills Section
 							</h1>
 						</div>
@@ -192,16 +192,16 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				<div className="px-6 pt-3">
-					<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+					<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 						Work Page Content
 					</h1>
 				</div>
 				<hr className="pb-5" />
 				{/* work page hero section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Hero Section
 							</h1>
 						</div>
@@ -266,10 +266,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page research section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Research Section
 							</h1>
 						</div>
@@ -335,10 +335,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page danger section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Danger Section
 							</h1>
 						</div>
@@ -404,10 +404,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page impact section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Impact Section
 							</h1>
 						</div>
@@ -470,10 +470,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page solution section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Solution Section
 							</h1>
 						</div>
@@ -555,10 +555,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page lifecycle section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								LifeCycle Section
 							</h1>
 						</div>
@@ -605,10 +605,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page material section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Material Section
 							</h1>
 						</div>
@@ -673,10 +673,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page modal section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Modal Section
 							</h1>
 						</div>
@@ -732,10 +732,10 @@ export default async function Dashboard() {
 					</div>
 				</div>
 				{/* work page render section */}
-				<div className="gap-4 flex flex-col px-6">
+				<div className="gap-1 flex flex-col px-6 pb-5">
 					<div className="w-full flex justify-between items-center gap-4">
 						<div>
-							<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
 								Render Section
 							</h1>
 						</div>

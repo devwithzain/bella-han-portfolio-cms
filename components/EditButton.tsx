@@ -27,7 +27,7 @@ export default function EditButton({
 		<Link
 			onClick={() => editPost(id)}
 			href={`/dashboard/${url}/${id}`}
-			className="text-[16px] cursor-pointer font-serif font-medium bg-[#081226] text-white px-4 py-2 rounded-lg">
+			className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-4 py-2 rounded-lg">
 			Edit
 		</Link>
 	);

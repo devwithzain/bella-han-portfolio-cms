@@ -27,7 +27,9 @@ export default function UserMenu({ currentUser }: TUserMenuProps) {
 				<div className="">
 					<Avatar src={currentUser?.image} />
 				</div>
-				<h1 className="text-[18px] font-medium text-[#081226]">Bella Han</h1>
+				<h1 className="text-[18px] font-medium text-[#081226] font-Poppins">
+					Bella Han
+				</h1>
 				<div
 					onClick={toggleOpen}
 					className={`cursor-pointer transition-all duration-200 ease-linear ${

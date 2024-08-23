@@ -52,7 +52,7 @@ export default function AddService() {
 					<input
 						type="submit"
 						value={`${isSubmitting ? "Loading..." : "Submit"}`}
-						className="text-[20px] cursor-pointer text-black font-serif font-medium bg-white border-2 px-6 py-[18px] rounded-lg"
+						className="text-[20px] cursor-pointer text-black font-Poppins font-medium bg-white border-2 px-6 py-[18px] rounded-lg"
 						disabled={isSubmitting}
 					/>
 				</form>

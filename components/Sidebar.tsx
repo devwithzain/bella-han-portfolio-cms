@@ -11,11 +11,11 @@ export default function Sidebar() {
 	const router = useRouter();
 	const pathName = usePathname();
 	return (
-		<div className="w-[15%] rounded-lg bg-[#F7F7F7] py-6 px-4 h-[97%] fixed">
+		<div className="w-[15%] rounded-lg bg-[#BBB0D2] py-6 px-4 h-[97%] fixed">
 			<div className="flex flex-col gap-2">
 				<Logo />
 				<hr className="bg-black text-black w-full" />
-				<h1 className="text-[#081226] text-[16px] uppercase font-medium text-left w-full">
+				<h1 className="text-[#081226] text-[16px] font-Poppins uppercase font-medium text-left w-full">
 					Main Menu
 				</h1>
 			</div>
@@ -31,13 +31,13 @@ export default function Sidebar() {
 									pathName === item.href ? "bg-[#081226]" : ""
 								}`}>
 								<div
-									className={`text-[#081226] group-hover:text-white ${
+									className={`text-[#081226] group-hover:text-white font-Poppins ${
 										pathName === item.href ? "text-white" : ""
 									}`}>
 									{item.icon}
 								</div>
 								<h1
-									className={`text-[#081226] group-hover:text-white ${
+									className={`text-[#081226] group-hover:text-white font-Poppins ${
 										pathName === item.href ? "text-white" : ""
 									}`}>
 									{item.title}
@@ -51,9 +51,11 @@ export default function Sidebar() {
 						<div className="transition-all duration-200 ease-linear py-2 px-4 rounded-lg cursor-pointer w-full flex items-center gap-2 text-[#081226] group-hover:bg-[#081226]">
 							<BiSupport
 								size={22}
-								className="group-hover:text-white text-[#081226]"
+								className="group-hover:text-white text-[#081226] font-Poppins"
 							/>
-							<h1 className="group-hover:text-white text-[#081226]">Support</h1>
+							<h1 className="group-hover:text-white text-[#081226] font-Poppins">
+								Support
+							</h1>
 						</div>
 					</div>
 					<div
@@ -62,9 +64,9 @@ export default function Sidebar() {
 						<div className="transition-all duration-200 ease-linear py-2 px-4 rounded-lg cursor-pointer w-full flex items-center gap-2 group-hover:bg-[#081226]">
 							<MdOutlineSettings
 								size={22}
-								className="group-hover:text-white text-[#081226]"
+								className="group-hover:text-white text-[#081226] font-Poppins"
 							/>
-							<h1 className="group-hover:text-white text-[#081226]">
+							<h1 className="group-hover:text-white text-[#081226] font-Poppins">
 								Settings
 							</h1>
 						</div>
@@ -73,9 +75,11 @@ export default function Sidebar() {
 						<div className="transition-all duration-200 ease-linear py-2 px-4 rounded-lg cursor-pointer w-full flex items-center gap-2 group-hover:bg-[#081226]">
 							<FiLogOut
 								size={22}
-								className="group-hover:text-white text-[#081226]"
+								className="group-hover:text-white text-[#081226] font-Poppins"
 							/>
-							<h1 className="group-hover:text-white text-[#081226]">Logout</h1>
+							<h1 className="group-hover:text-white text-[#081226] font-Poppins">
+								Logout
+							</h1>
 						</div>
 					</div>
 				</div>

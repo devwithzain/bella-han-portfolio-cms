@@ -23,14 +23,14 @@ export default async function Service() {
 					<div className="gap-4 flex flex-col px-6">
 						<div className="w-full flex justify-between items-center gap-4">
 							<div>
-								<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									About Section Content
 								</h1>
 							</div>
 							<div>
 								<Link
 									href="/dashboard/home/about/add-about-content"
-									className="text-[16px] cursor-pointer font-serif font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
+									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
 									Add New
 								</Link>
 							</div>
@@ -39,12 +39,16 @@ export default async function Service() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
-										<th className="border border-gray-200 px-4 py-2">TITLE</th>
-										<th className="border border-gray-200 px-4 py-2">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+											TITLE
+										</th>
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
 											DESCRIPTION
 										</th>
-										<th className="border border-gray-200 px-4 py-2">Images</th>
-										<th className="border border-gray-200 px-4 py-2">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+											Images
+										</th>
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
 											Actions
 										</th>
 									</tr>
@@ -52,21 +56,21 @@ export default async function Service() {
 								<tbody>
 									{responseAbout?.map((item) => (
 										<tr key={item.id}>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												<div>
 													<h1 className="text-[15px] text-black font-medium font-sans">
 														{item.title}
 													</h1>
 												</div>
 											</td>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												<div>
 													<p className="text-[15px] text-black font-medium font-sans">
 														{item.paragraph1}
 													</p>
 												</div>
 											</td>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												{item.imageUrl && (
 													<Image
 														src={item.imageUrl}
@@ -77,7 +81,7 @@ export default async function Service() {
 													/>
 												)}
 											</td>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												<div className="flex items-end justify-end gap-4">
 													<EditButton
 														id={item.id}
@@ -100,14 +104,14 @@ export default async function Service() {
 					<div className="gap-4 flex flex-col px-6">
 						<div className="w-full flex justify-between items-center gap-4">
 							<div>
-								<h1 className="text-[40px] font-ProximaNova font-medium tracking-tighter leading-tight">
+								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									Skills Section Content
 								</h1>
 							</div>
 							<div>
 								<Link
 									href="/dashboard/home/skills/add-skills-content"
-									className="text-[16px] cursor-pointer font-serif font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
+									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
 									Add New
 								</Link>
 							</div>
@@ -116,13 +120,19 @@ export default async function Service() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
-										<th className="border border-gray-200 px-4 py-2">TITLE</th>
-										<th className="border border-gray-200 px-4 py-2">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+											TITLE
+										</th>
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
 											DESCRIPTION
 										</th>
-										<th className="border border-gray-200 px-4 py-2">Skills</th>
-										<th className="border border-gray-200 px-4 py-2">Image</th>
-										<th className="border border-gray-200 px-4 py-2">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+											Skills
+										</th>
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+											Image
+										</th>
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
 											Actions
 										</th>
 									</tr>
@@ -130,28 +140,28 @@ export default async function Service() {
 								<tbody>
 									{responseLifeCycle?.map((item) => (
 										<tr key={item.id}>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												<div>
 													<h1 className="text-[15px] text-black font-medium font-sans">
 														{item.title}
 													</h1>
 												</div>
 											</td>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												<div>
 													<p className="text-[15px] text-black font-medium font-sans">
 														{item.heading1}
 													</p>
 												</div>
 											</td>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												<div>
 													<p className="text-[15px] text-black font-medium font-sans">
 														{item.skillNo1}
 													</p>
 												</div>
 											</td>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												{item.images.slice(0, 1).map((img, i) => (
 													<Image
 														key={i}
@@ -163,7 +173,7 @@ export default async function Service() {
 													/>
 												))}
 											</td>
-											<td className="border border-gray-200 px-4 py-2 w-fit">
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
 												<div className="flex items-end justify-end gap-4">
 													<EditButton
 														id={item.id}

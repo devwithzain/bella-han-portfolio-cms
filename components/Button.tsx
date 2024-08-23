@@ -14,6 +14,7 @@ export default function Button({
 			onClick={onClick}
 			className={`
         relative
+		  font-Poppins
         disabled:opacity-70
         disabled:cursor-not-allowed
         rounded-lg

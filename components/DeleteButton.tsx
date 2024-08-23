@@ -24,7 +24,7 @@ export default function DeleteButton({ id, path }: { id: any; path: string }) {
 	return (
 		<Link
 			href=""
-			className="text-[16px] cursor-pointer font-serif font-medium bg-[#081226] text-white px-4 py-2 rounded-lg"
+			className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-4 py-2 rounded-lg"
 			onClick={() => deletePost(id)}>
 			Delete
 		</Link>

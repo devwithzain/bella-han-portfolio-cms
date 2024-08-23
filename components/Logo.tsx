@@ -13,7 +13,7 @@ export default function Logo() {
 				width="23"
 				alt="Logo"
 			/>
-			<h1 className="text-[24px] font-ProximaNova font-semibold uppercase text-[#081226]">
+			<h1 className="text-[24px] font-semibold uppercase text-[#081226] font-Poppins">
 				Bella Han
 			</h1>
 		</Link>

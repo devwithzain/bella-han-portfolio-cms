@@ -50,7 +50,7 @@ export default function Form({ response }: any) {
 					<input
 						type="submit"
 						value={`${isSubmitting ? "Loading..." : "Update"}`}
-						className="text-[20px] cursor-pointer text-black font-serif font-medium bg-slate-200 px-6 py-3 rounded-lg"
+						className="text-[20px] cursor-pointer text-black font-Poppins font-medium bg-slate-200 px-6 py-3 rounded-lg"
 						disabled={isSubmitting}
 					/>
 				</form>

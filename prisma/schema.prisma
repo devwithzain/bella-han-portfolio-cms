@@ -117,3 +117,22 @@ model WorkRenderSection {
   paragraph String
   imageUrl  String
 }
+
+// contact page schemas
+
+model ContactHeroSection {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  title   String
+  heading String
+}
+
+model ContactFormSection {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  paragraph String
+}
+
+model ContactResumeFile {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  resume String
+}

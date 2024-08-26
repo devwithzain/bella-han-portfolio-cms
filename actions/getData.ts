@@ -54,3 +54,13 @@ export const getSkillsSectionData = async () => {
    const data = await prisma?.homeSkillsSection.findMany();
    return data;
 };
+
+export const getContactHeroSectionData = async () => {
+   const data = await prisma?.contactHeroSection.findMany();
+   return data;
+};
+
+export const getContactFormSectionData = async () => {
+   const data = await prisma?.contactFormSection.findMany();
+   return data;
+};

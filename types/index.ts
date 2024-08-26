@@ -94,6 +94,17 @@ export const workRenderSchema = z.object({
    imageUrl: z.string().optional(),
 });
 
+// contact page zod schema
+
+export const contactHeroSchema = z.object({
+   title: z.string(),
+   heading: z.string(),
+});
+
+export const contactFormSchema = z.object({
+   title: z.string(),
+   paragraph: z.string(),
+});
 
 export type TpageAboutSectionData = z.infer<typeof homePageAboutSchema>;
 export type TpageSkillSectionData = z.infer<typeof homePageSkillsSchema>;
@@ -107,6 +118,9 @@ export type TworkMaterialSectionData = z.infer<typeof workPageMaterialSchema>;
 export type TworkResearchSectionData = z.infer<typeof workPageResearchSchema>;
 export type TworkSolutionSectionData = z.infer<typeof workSolutionImpactSchema>;
 export type TworkLifeCycleSectionData = z.infer<typeof workPageLifeCycleSchema>;
+
+export type TcontactHeroSectionData = z.infer<typeof contactHeroSchema>;
+export type TcontactFormSectionData = z.infer<typeof contactFormSchema>;
 
 export type THeadingProps = {
    title: string;
@@ -179,4 +193,8 @@ export type TNavbarProps = {
 
 export type TimageUploadProps = {
    onImageUpload: (url: string) => void;
+};
+
+export type TresumeUploadProps = {
+   onResumeUpload: (url: string) => void;
 };

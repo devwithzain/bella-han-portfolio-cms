@@ -3,7 +3,6 @@ import Logo from "./Logo";
 import Link from "next/link";
 import { sideBarItem } from "@/constants";
 import { FiLogOut } from "react-icons/fi";
-import { BiSupport } from "react-icons/bi";
 import { MdOutlineSettings } from "react-icons/md";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -47,17 +46,6 @@ export default function Sidebar() {
 					))}
 				</div>
 				<div className="absolute bottom-4 left-0 px-4 w-full flex flex-col gap-2">
-					<div className="group transition-all duration-200 ease-linear">
-						<div className="transition-all duration-200 ease-linear py-2 px-4 rounded-lg cursor-pointer w-full flex items-center gap-2 text-[#081226] group-hover:bg-[#081226]">
-							<BiSupport
-								size={22}
-								className="group-hover:text-white text-[#081226] font-Poppins"
-							/>
-							<h1 className="group-hover:text-white text-[#081226] font-Poppins">
-								Support
-							</h1>
-						</div>
-					</div>
 					<div
 						className="group transition-all duration-200 ease-linear"
 						onClick={() => router.push("/user-profile")}>

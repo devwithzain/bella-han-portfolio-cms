@@ -13,3 +13,4 @@ export { default as EditButton } from './EditButton';
 export { default as ImageUpload } from './ImageUpload';
 export { default as Sidebar } from './Sidebar';
 export { default as ImagesUpload } from './ImagesUpload';
+export { default as ResumeUpload } from './ResumeUpload';

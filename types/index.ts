@@ -106,6 +106,10 @@ export const contactFormSchema = z.object({
    paragraph: z.string(),
 });
 
+export const contactResumeSchema = z.object({
+   resume: z.string(),
+});
+
 export type TpageAboutSectionData = z.infer<typeof homePageAboutSchema>;
 export type TpageSkillSectionData = z.infer<typeof homePageSkillsSchema>;
 
@@ -121,6 +125,7 @@ export type TworkLifeCycleSectionData = z.infer<typeof workPageLifeCycleSchema>;
 
 export type TcontactHeroSectionData = z.infer<typeof contactHeroSchema>;
 export type TcontactFormSectionData = z.infer<typeof contactFormSchema>;
+export type TcontactResumeFile = z.infer<typeof contactResumeSchema>;
 
 export type THeadingProps = {
    title: string;

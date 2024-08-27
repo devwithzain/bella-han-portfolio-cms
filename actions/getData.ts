@@ -64,3 +64,8 @@ export const getContactFormSectionData = async () => {
    const data = await prisma?.contactFormSection.findMany();
    return data;
 };
+
+export const getContactResumeFile = async () => {
+   const data = await prisma?.contactResumeFile.findMany();
+   return data;
+};

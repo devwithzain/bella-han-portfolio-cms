@@ -27,10 +27,10 @@ export default function ResumeUpload({ onResumeUpload }: TresumeUploadProps) {
 		<>
 			<CldUploadWidget
 				onSuccess={handleResumeChange}
-				uploadPreset="your_upload_preset"
+				uploadPreset="jdz0tunu"
 				options={{
 					maxFiles: 1,
-					resourceType: "raw",
+					resourceType: "auto",
 				}}>
 				{({ open }) => {
 					return (
@@ -38,24 +38,13 @@ export default function ResumeUpload({ onResumeUpload }: TresumeUploadProps) {
 							onClick={() => open?.()}
 							className="w-full flex gap-2 items-center px-4 py-2 border-2 rounded-md cursor-pointer">
 							<FaFilePdf size={50} />
-							<button className="font-semibold text-lg">
-								Click to upload your resume
+							<button className="font-semibold text-lg font-Poppins">
+								upload your resume
 							</button>
 						</div>
 					);
 				}}
 			</CldUploadWidget>
-			{resumeUrl && (
-				<div>
-					<a
-						href={resumeUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-blue-500 underline">
-						Download Your Resume
-					</a>
-				</div>
-			)}
 		</>
 	);
 }

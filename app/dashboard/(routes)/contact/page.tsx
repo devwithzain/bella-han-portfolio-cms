@@ -4,16 +4,21 @@ import GetCurrentUser from "@/actions/getCurrentUser";
 import {
 	getContactHeroSectionData,
 	getContactFormSectionData,
+	getContactResumeFile,
 } from "@/actions/getData";
 import { AdminNavbar, EditButton, DeleteButton, Sidebar } from "@/components";
 
 export default async function Contact() {
+	const resumeUrl =
+		"https://res.cloudinary.com/dnpqqwyhz/image/upload/v1724698059/osz7vsifpjwio9zbh2ut.pdf";
+
 	const currentUser = await GetCurrentUser();
 	if (!currentUser) {
 		redirect("/");
 	}
 	const responseContactHero = await getContactHeroSectionData();
 	const responseContactForm = await getContactFormSectionData();
+	const responseContactResume = await getContactResumeFile();
 	return (
 		<>
 			<div className="w-full p-4 flex gap-2">
@@ -146,6 +151,65 @@ export default async function Contact() {
 													<DeleteButton
 														id={item.id}
 														path="/api/contactpage/form"
+													/>
+												</div>
+											</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+					</div>
+					{/* contact page resume file  */}
+					<div className="gap-4 flex flex-col px-6">
+						<div className="w-full flex justify-between items-center gap-4">
+							<div>
+								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
+									Resume File
+								</h1>
+							</div>
+							<div>
+								<Link
+									href="/dashboard/contact/resume/add-resume-content"
+									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
+									Add New
+								</Link>
+							</div>
+						</div>
+						<div className="overflow-x-auto">
+							<table className="min-w-full bg-white border border-gray-200">
+								<thead>
+									<tr>
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+											PDF
+										</th>
+										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+											Actions
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									{responseContactResume?.map((item) => (
+										<tr key={item.id}>
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+												<Link
+													href={item.resume}
+													download
+													target="_blank"
+													className="bg-[#081226] text-white text-[16px] font-Poppins px-4 py-2 rounded-md">
+													Download Resume
+												</Link>
+											</td>
+											<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+												<div className="flex items-end justify-end gap-4">
+													<EditButton
+														id={item.id}
+														path="/api/contactpage/resume"
+														url="contact/resume"
+													/>
+													<DeleteButton
+														id={item.id}
+														path="/api/contactpage/resume"
 													/>
 												</div>
 											</td>

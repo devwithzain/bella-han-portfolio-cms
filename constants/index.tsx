@@ -1,7 +1,7 @@
 import { FaHome } from "react-icons/fa";
-import { MdContactPhone } from "react-icons/md";
-import { BiSolidDashboard } from "react-icons/bi";
+import { IoMdContact } from "react-icons/io";
 import { BsBriefcaseFill } from "react-icons/bs";
+import { BiSolidDashboard } from "react-icons/bi";
 
 export const sideBarItem = [
 	{
@@ -26,6 +26,6 @@ export const sideBarItem = [
 		id: 4,
 		title: "Contact Page",
 		href: "/dashboard/contact",
-		icon: <MdContactPhone />,
+		icon: <IoMdContact />,
 	},
 ];

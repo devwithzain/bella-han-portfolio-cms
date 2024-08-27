@@ -38,7 +38,7 @@ export default function AddService() {
 
 			await axios.post("/api/workpage/material", data);
 		} catch (error: any) {
-			toast.success("Error", error);
+			toast.error("Error", error);
 		} finally {
 			toast.success("Added");
 			reset();

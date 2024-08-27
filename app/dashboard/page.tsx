@@ -4,6 +4,9 @@ import GetCurrentUser from "@/actions/getCurrentUser";
 import { AdminNavbar, DeleteButton, EditButton, Sidebar } from "@/components";
 import {
 	getAboutSectionData,
+	getContactFormSectionData,
+	getContactHeroSectionData,
+	getContactResumeFile,
 	getDangerSectionData,
 	getImpactSectionData,
 	getLifeCycleSectionData,
@@ -15,6 +18,7 @@ import {
 	getSolutionSectionData,
 	getWorkSectionData,
 } from "@/actions/getData";
+import Link from "next/link";
 
 export default async function Dashboard() {
 	const currentUser = await GetCurrentUser();
@@ -34,6 +38,9 @@ export default async function Dashboard() {
 	const responseSolution = await getSolutionSectionData();
 	const responseMaterial = await getMaterialSectionData();
 	const responseLifeCycle = await getLifeCycleSectionData();
+	const responseContactResume = await getContactResumeFile();
+	const responseContactHero = await getContactHeroSectionData();
+	const responseContactForm = await getContactFormSectionData();
 	return (
 		<div className="w-full p-4 flex gap-2">
 			<Sidebar />
@@ -787,6 +794,184 @@ export default async function Dashboard() {
 												<DeleteButton
 													id={item.id}
 													path="/api/workpage/render"
+												/>
+											</div>
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				{/* contact page hero section */}
+				<div className="px-6">
+					<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
+						Contact Page Content
+					</h1>
+				</div>
+				<hr className="pb-5" />
+				<div className="gap-2 flex flex-col px-6 pb-5">
+					<div className="w-full flex justify-between items-center gap-4">
+						<div>
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
+								Hero Section Content
+							</h1>
+						</div>
+					</div>
+					<div className="overflow-x-auto">
+						<table className="min-w-full bg-white border border-gray-200">
+							<thead>
+								<tr>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										Heading
+									</th>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										Actions
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								{responseContactHero?.map((item) => (
+									<tr key={item.id}>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<div>
+												<h1 className="text-[15px] text-black font-medium font-sans">
+													{item.title}
+												</h1>
+											</div>
+										</td>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<div>
+												<p className="text-[15px] text-black font-medium font-sans">
+													{item.heading}
+												</p>
+											</div>
+										</td>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<div className="flex items-end justify-end gap-4">
+												<EditButton
+													id={item.id}
+													path="/api/contactpage/hero"
+													url="contact/hero"
+												/>
+												<DeleteButton
+													id={item.id}
+													path="/api/contactpage/hero"
+												/>
+											</div>
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				{/* contact page form section */}
+				<div className="gap-2 flex flex-col px-6 pb-5">
+					<div className="w-full flex justify-between items-center gap-4">
+						<div>
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
+								Form Section Content
+							</h1>
+						</div>
+					</div>
+					<div className="overflow-x-auto">
+						<table className="min-w-full bg-white border border-gray-200">
+							<thead>
+								<tr>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										Paragraph
+									</th>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										Actions
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								{responseContactForm?.map((item) => (
+									<tr key={item.id}>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<div>
+												<h1 className="text-[15px] text-black font-medium font-sans">
+													{item.title}
+												</h1>
+											</div>
+										</td>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<div>
+												<p className="text-[15px] text-black font-medium font-sans">
+													{item.paragraph}
+												</p>
+											</div>
+										</td>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<div className="flex items-end justify-end gap-4">
+												<EditButton
+													id={item.id}
+													path="/api/contactpage/form"
+													url="contact/form"
+												/>
+												<DeleteButton
+													id={item.id}
+													path="/api/contactpage/form"
+												/>
+											</div>
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				{/* contact page resume file  */}
+				<div className="gap-2 flex flex-col px-6 pb-5">
+					<div className="w-full flex justify-between items-center gap-4">
+						<div>
+							<h1 className="text-[24px] font-Poppins font-medium tracking-tighter leading-tight">
+								Resume File
+							</h1>
+						</div>
+					</div>
+					<div className="overflow-x-auto">
+						<table className="min-w-full bg-white border border-gray-200">
+							<thead>
+								<tr>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										PDF
+									</th>
+									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										Actions
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								{responseContactResume?.map((item) => (
+									<tr key={item.id}>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<Link
+												href={item.resume}
+												download
+												target="_blank"
+												className="bg-[#081226] text-white text-[16px] font-Poppins px-4 py-2 rounded-md">
+												Download Resume
+											</Link>
+										</td>
+										<td className="border border-gray-200 px-4 py-2 font-Poppins w-fit">
+											<div className="flex items-end justify-end gap-4">
+												<EditButton
+													id={item.id}
+													path="/api/contactpage/resume"
+													url="contact/resume"
+												/>
+												<DeleteButton
+													id={item.id}
+													path="/api/contactpage/resume"
 												/>
 											</div>
 										</td>

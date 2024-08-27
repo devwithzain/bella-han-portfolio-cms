@@ -22,7 +22,7 @@ export default function AddContent() {
 		try {
 			await axios.post("/api/contactpage/hero", data);
 		} catch (error: any) {
-			toast.success("Error", error);
+			toast.error("Error", error);
 		} finally {
 			toast.success("Added");
 			reset();

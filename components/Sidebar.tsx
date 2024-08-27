@@ -1,13 +1,17 @@
 "use client";
 import Logo from "./Logo";
 import Link from "next/link";
+import toast from "react-hot-toast";
 import { sideBarItem } from "@/constants";
 import { FiLogOut } from "react-icons/fi";
-import { MdOutlineSettings } from "react-icons/md";
-import { usePathname, useRouter } from "next/navigation";
+import { signOut } from "next-auth/react";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
-	const router = useRouter();
+	const handleClick = () => {
+		signOut({ callbackUrl: "/" });
+		toast.success("Logout");
+	};
 	const pathName = usePathname();
 	return (
 		<div className="w-[15%] rounded-lg bg-[#BBB0D2] py-6 px-4 h-[97%] fixed">
@@ -46,21 +50,10 @@ export default function Sidebar() {
 					))}
 				</div>
 				<div className="absolute bottom-4 left-0 px-4 w-full flex flex-col gap-2">
-					<div
-						className="group transition-all duration-200 ease-linear"
-						onClick={() => router.push("/user-profile")}>
-						<div className="transition-all duration-200 ease-linear py-2 px-4 rounded-lg cursor-pointer w-full flex items-center gap-2 group-hover:bg-[#081226]">
-							<MdOutlineSettings
-								size={22}
-								className="group-hover:text-white text-[#081226] font-Poppins"
-							/>
-							<h1 className="group-hover:text-white text-[#081226] font-Poppins">
-								Settings
-							</h1>
-						</div>
-					</div>
 					<div className="group transition-all duration-200 ease-linear">
-						<div className="transition-all duration-200 ease-linear py-2 px-4 rounded-lg cursor-pointer w-full flex items-center gap-2 group-hover:bg-[#081226]">
+						<div
+							className="transition-all duration-200 ease-linear py-2 px-4 rounded-lg cursor-pointer w-full flex items-center gap-2 group-hover:bg-[#081226]"
+							onClick={handleClick}>
 							<FiLogOut
 								size={22}
 								className="group-hover:text-white text-[#081226] font-Poppins"

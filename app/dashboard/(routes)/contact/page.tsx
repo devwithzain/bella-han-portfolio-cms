@@ -34,13 +34,6 @@ export default async function Contact() {
 									Hero Section Content
 								</h1>
 							</div>
-							<div>
-								<Link
-									href="/dashboard/contact/hero/add-hero-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
-							</div>
 						</div>
 						<div className="overflow-x-auto">
 							<table className="min-w-full bg-white border border-gray-200">
@@ -101,13 +94,6 @@ export default async function Contact() {
 									Form Section Content
 								</h1>
 							</div>
-							<div>
-								<Link
-									href="/dashboard/contact/form/add-form-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
-							</div>
 						</div>
 						<div className="overflow-x-auto">
 							<table className="min-w-full bg-white border border-gray-200">
@@ -167,13 +153,6 @@ export default async function Contact() {
 								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									Resume File
 								</h1>
-							</div>
-							<div>
-								<Link
-									href="/dashboard/contact/resume/add-resume-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
 							</div>
 						</div>
 						<div className="overflow-x-auto">

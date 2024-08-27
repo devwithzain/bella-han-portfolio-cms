@@ -1,16 +1,13 @@
 "use client";
+import toast from "react-hot-toast";
 import { TUserMenuProps } from "@/types";
 import { signOut } from "next-auth/react";
 import { LuLogOut } from "react-icons/lu";
-import { useRouter } from "next/navigation";
-import { CiSettings } from "react-icons/ci";
 import { useCallback, useState } from "react";
 import { MenuItem, Avatar } from "@/components";
-import toast from "react-hot-toast";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export default function UserMenu({ currentUser }: TUserMenuProps) {
-	const router = useRouter();
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleOpen = useCallback(() => {
@@ -43,12 +40,6 @@ export default function UserMenu({ currentUser }: TUserMenuProps) {
 					<div className="flex flex-col cursor-pointer">
 						{currentUser && (
 							<>
-								<MenuItem
-									label="Setting"
-									onClick={() => router.push("/dashboard/user-profile")}
-									icon={<CiSettings size={20} />}
-								/>
-								<hr />
 								<MenuItem
 									label="Logout"
 									onClick={handleClick}

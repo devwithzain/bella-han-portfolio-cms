@@ -21,7 +21,7 @@ export default function AddService() {
 		try {
 			await axios.post("/api/contactpage/form", data);
 		} catch (error: any) {
-			toast.success("Error", error);
+			toast.error("Error", error);
 		} finally {
 			toast.success("Added");
 			reset();

@@ -32,7 +32,7 @@ export default function AddService() {
 			data.images = uploadedImages;
 			await axios.post("/api/workpage/danger", data);
 		} catch (error: any) {
-			toast.success("Error", error);
+			toast.error("Error", error);
 		} finally {
 			toast.success("Added");
 			reset();

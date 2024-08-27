@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import GetCurrentUser from "@/actions/getCurrentUser";
@@ -26,13 +25,6 @@ export default async function Service() {
 								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									About Section Content
 								</h1>
-							</div>
-							<div>
-								<Link
-									href="/dashboard/home/about/add-about-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
 							</div>
 						</div>
 						<div className="overflow-x-auto">
@@ -107,13 +99,6 @@ export default async function Service() {
 								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									Skills Section Content
 								</h1>
-							</div>
-							<div>
-								<Link
-									href="/dashboard/home/skills/add-skills-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
 							</div>
 						</div>
 						<div className="overflow-x-auto">

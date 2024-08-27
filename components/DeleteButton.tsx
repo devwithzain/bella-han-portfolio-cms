@@ -14,7 +14,7 @@ export default function DeleteButton({ id, path }: { id: any; path: string }) {
 				},
 			});
 		} catch (error: any) {
-			toast.success("Error", error);
+			toast.error("Error", error);
 		} finally {
 			router.refresh();
 			toast.success("Deleted");

@@ -44,13 +44,6 @@ export default async function Service() {
 									Hero Section Content
 								</h1>
 							</div>
-							<div>
-								<Link
-									href="/dashboard/work/hero/add-hero-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
-							</div>
 						</div>
 						<div className="overflow-x-auto">
 							<table className="min-w-full bg-white border border-gray-200">
@@ -124,13 +117,6 @@ export default async function Service() {
 								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									Research Section Content
 								</h1>
-							</div>
-							<div>
-								<Link
-									href="/dashboard/work/research/add-research-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
 							</div>
 						</div>
 						<div className="overflow-x-auto">
@@ -207,13 +193,6 @@ export default async function Service() {
 									Danger Section Content
 								</h1>
 							</div>
-							<div>
-								<Link
-									href="/dashboard/work/danger/add-danger-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
-							</div>
 						</div>
 						<div className="overflow-x-auto">
 							<table className="min-w-full bg-white border border-gray-200">
@@ -289,13 +268,6 @@ export default async function Service() {
 									Impact Section Content
 								</h1>
 							</div>
-							<div>
-								<Link
-									href="/dashboard/work/impact/add-impact-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
-							</div>
 						</div>
 						<div className="overflow-x-auto">
 							<table className="min-w-full bg-white border border-gray-200">
@@ -369,13 +341,6 @@ export default async function Service() {
 								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									Solution Section Content
 								</h1>
-							</div>
-							<div>
-								<Link
-									href="/dashboard/work/solution/add-solution-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
 							</div>
 						</div>
 						<div className="overflow-x-auto">
@@ -472,13 +437,6 @@ export default async function Service() {
 									LifeCycle Section Content
 								</h1>
 							</div>
-							<div>
-								<Link
-									href="/dashboard/work/lifecycle/add-lifecycle-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
-							</div>
 						</div>
 						<div className="overflow-x-auto">
 							<table className="min-w-full bg-white border border-gray-200">
@@ -532,13 +490,6 @@ export default async function Service() {
 								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									Material Section Content
 								</h1>
-							</div>
-							<div>
-								<Link
-									href="/dashboard/work/materials/add-materials-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
 							</div>
 						</div>
 						<div className="overflow-x-auto">
@@ -614,13 +565,6 @@ export default async function Service() {
 									Modal Section Content
 								</h1>
 							</div>
-							<div>
-								<Link
-									href="/dashboard/work/modals/add-modal-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
-							</div>
 						</div>
 						<div className="overflow-x-auto">
 							<table className="min-w-full bg-white border border-gray-200">
@@ -685,13 +629,6 @@ export default async function Service() {
 								<h1 className="text-[35px] font-Poppins font-medium tracking-tighter leading-tight">
 									Render Section Content
 								</h1>
-							</div>
-							<div>
-								<Link
-									href="/dashboard/work/render/add-render-content"
-									className="text-[16px] cursor-pointer font-Poppins font-medium bg-[#081226] text-white px-6 py-3 rounded-lg">
-									Add New
-								</Link>
 							</div>
 						</div>
 						<div className="overflow-x-auto">

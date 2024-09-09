@@ -2,6 +2,7 @@ export { default as AdminNavbar } from './AdminNavbar';
 export { default as LoginModal } from './LoginModal';
 export { default as DeleteButton } from './DeleteButton';
 export { default as Button } from './Button';
+export { default as Loader } from './loader';
 export { default as Input } from './Input';
 export { default as Heading } from './Heading';
 export { default as Modal } from './Modal';

@@ -39,13 +39,13 @@ export default async function Contact() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											TITLE
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Heading
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Actions
 										</th>
 									</tr>
@@ -99,13 +99,13 @@ export default async function Contact() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											TITLE
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Paragraph
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Actions
 										</th>
 									</tr>
@@ -159,10 +159,10 @@ export default async function Contact() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											PDF
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Actions
 										</th>
 									</tr>

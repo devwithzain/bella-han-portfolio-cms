@@ -31,8 +31,8 @@ export default function LoginModal() {
 			setIsLoading(false);
 
 			if (callback?.ok) {
-				router.push("/dashboard");
 				toast.success("Logged in");
+				router.push("/dashboard");
 			}
 
 			if (callback?.error) {

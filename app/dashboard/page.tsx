@@ -66,12 +66,18 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
 										DESCRIPTION
 									</th>
-									<th className="border border-gray-200 px-4 py-2">Images</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Images
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -134,13 +140,21 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
 										DESCRIPTION
 									</th>
-									<th className="border border-gray-200 px-4 py-2">Skills</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Skills
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -217,12 +231,18 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
 										DESCRIPTION
 									</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -285,12 +305,18 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
 										DESCRIPTION
 									</th>
-									<th className="border border-gray-200 px-4 py-2">Images</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Images
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -354,12 +380,18 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
 										DESCRIPTION
 									</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -423,10 +455,18 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">HEADING</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										HEADING
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -489,14 +529,24 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">HEADING</th>
-									<th className="border border-gray-200 px-4 py-2">
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										HEADING
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
 										PARAGRAPH
 									</th>
-									<th className="border border-gray-200 px-4 py-2">SUBTITLE</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										SUBTITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -574,8 +624,12 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -624,12 +678,18 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
 										DESCRIPTION
 									</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -692,9 +752,15 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">TITLE</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										TITLE
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -751,9 +817,15 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2">Title</th>
-									<th className="border border-gray-200 px-4 py-2">Image</th>
-									<th className="border border-gray-200 px-4 py-2">Actions</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Title
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Image
+									</th>
+									<th className="border border-gray-200 px-4 py-2 text-left">
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -822,13 +894,13 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										TITLE
 									</th>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										Heading
 									</th>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										Actions
 									</th>
 								</tr>
@@ -882,13 +954,13 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										TITLE
 									</th>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										Paragraph
 									</th>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										Actions
 									</th>
 								</tr>
@@ -942,10 +1014,10 @@ export default async function Dashboard() {
 						<table className="min-w-full bg-white border border-gray-200">
 							<thead>
 								<tr>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										PDF
 									</th>
-									<th className="border border-gray-200 px-4 py-2 font-Poppins">
+									<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 										Actions
 									</th>
 								</tr>

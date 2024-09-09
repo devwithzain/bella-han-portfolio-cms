@@ -31,16 +31,16 @@ export default async function Service() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											TITLE
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											DESCRIPTION
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Images
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Actions
 										</th>
 									</tr>
@@ -105,19 +105,19 @@ export default async function Service() {
 							<table className="min-w-full bg-white border border-gray-200">
 								<thead>
 									<tr>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											TITLE
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											DESCRIPTION
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Skills
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Image
 										</th>
-										<th className="border border-gray-200 px-4 py-2 font-Poppins">
+										<th className="border border-gray-200 px-4 py-2 font-Poppins text-left">
 											Actions
 										</th>
 									</tr>
